@@ -2517,7 +2517,6 @@ class PHPMailer
                 $body .= $this->encodeString($this->Body, $bodyEncoding);
                 $body .= static::$LE;
                 $body .= $this->attachAll('inline', $this->boundary[2]);
-                $body .= static::$LE;
                 $body .= $this->endBoundary($this->boundary[1]);
                 break;
             case 'alt_attach':
@@ -2557,7 +2556,6 @@ class PHPMailer
                 $body .= $this->encodeString($this->Body, $bodyEncoding);
                 $body .= static::$LE;
                 $body .= $this->attachAll('inline', $this->boundary[3]);
-                $body .= static::$LE;
                 $body .= $this->endBoundary($this->boundary[2]);
                 $body .= static::$LE;
                 $body .= $this->attachAll('attachment', $this->boundary[1]);
